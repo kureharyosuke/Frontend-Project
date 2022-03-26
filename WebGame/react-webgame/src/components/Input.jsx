@@ -6,7 +6,7 @@ const input = ({ inputRef, type, name, value, placeholder, onChange }) => {
 };
 
 input.propTypes = {
-  inputRef: PropTypes.func,
+  inputRef: PropTypes.object,
   type: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,

@@ -5,19 +5,21 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 
 const GuGuDan = () => {
+  // # v1
   const [first, setFirst] = useState(Math.ceil(Math.random() * 9));
   const [second, setSecond] = useState(Math.ceil(Math.random() * 9));
   const [value, setValue] = useState("");
   const [result, setResult] = useState("");
-
   const inputRef = useRef(null);
 
+  // # v2
   const [gugudan, setGugudan] = useState({
     first: Math.ceil(Math.random() * 9),
     second: Math.ceil(Math.random() * 9),
     value: "",
     result: "",
   });
+  const inputRef2 = useRef(null);
 
   const onChangeFromInput = (e) => {
     setValue(e.target.value);
@@ -35,7 +37,6 @@ const GuGuDan = () => {
       setFirst(Math.ceil(Math.random() * 9));
       setSecond(Math.ceil(Math.random() * 9));
       setValue("");
-      inputRef.current.focus();
     } else {
       alert("오답입니다.");
       setResult("오답입니다.");
@@ -67,7 +68,6 @@ const GuGuDan = () => {
         result: "정답입니다.",
         value: "",
       });
-      inputRef.current.focus();
     } else {
       alert("오답입니다.");
       setGugudan({
@@ -94,7 +94,7 @@ const GuGuDan = () => {
           {gugudan.first} X {gugudan.second}
         </div>
         <Input
-          inputRef={inputRef}
+          inputRef={inputRef2}
           type={"number"}
           placeholder={"숫자"}
           name={"value"}
