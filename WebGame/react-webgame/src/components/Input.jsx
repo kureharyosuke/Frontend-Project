@@ -7,7 +7,7 @@ const input = ({ type, value, placeholder, onChange }) => {
 
 input.propTypes = {
   type: PropTypes.string.isRequired,
-  value: PropTypes.oneOf[("text", "number", "password, email")].isRequired,
+  value: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
 };
 
