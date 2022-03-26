@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const input = ({ type, value, placeholder, onChange }) => {
-  return <input type={type} value={value} placeholder={placeholder} onChange={onChange} />;
+const input = ({ inputRef, type, name, value, placeholder, onChange }) => {
+  return <input ref={inputRef} type={type} name={name} value={value} placeholder={placeholder} onChange={onChange} />;
 };
 
 input.propTypes = {
-  type: PropTypes.string.isRequired,
-  value: PropTypes.oneOf[("text", "number", "password, email")].isRequired,
-  placeholder: PropTypes.string.isRequired,
+  inputRef: PropTypes.object,
+  type: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default input;

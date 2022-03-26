@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import GuGuDanHook from "./pages/GuGuDan/hooks";
+import GuGuDanClass from "./pages/GuGuDan/class";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Hooks</h2>
+      <GuGuDanHook />
+      <h2>Class</h2>
+      <GuGuDanClass />
     </div>
   );
 }
