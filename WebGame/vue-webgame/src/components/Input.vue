@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Input",
+  name: "INPUT",
   props: {
     type: {
       type: String,
